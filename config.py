@@ -36,7 +36,6 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #pics
 START_PIC = os.environ.get("START_PIC", "https://envs.sh/VNK.jpg")
-")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://envs.sh/vXU.jpg")
 
 #text

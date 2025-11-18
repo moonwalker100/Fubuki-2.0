@@ -4,8 +4,6 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 
-
-
 #Bot token @Botfather
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7622241172:AAHjInldlbjFXAADnL6FS97NV4_IuGzF-kM")
 
@@ -29,8 +27,8 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://sagatobots00001:sagatobot
 DB_NAME = os.environ.get("DATABASE_NAME", "Fubuki_x_Robot_2_0_bot")
 
 #force sub channel id, if you want enable force sub
-FORCESUB_CHANNEL = int(os.environ.get("FORCESUB_CHANNEL", ""))
-FORCESUB_CHANNEL2 = int(os.environ.get("FORCESUB_CHANNEL2", ""))
+FORCESUB_CHANNEL = int(os.environ.get("FORCESUB_CHANNEL", "0"))
+FORCESUB_CHANNEL2 = int(os.environ.get("FORCESUB_CHANNEL2", "0"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -40,6 +38,7 @@ FORCE_PIC = os.environ.get("FORCE_PIC", "https://envs.sh/vXU.jpg")
 
 #text
 HELP_TXT = "<blockquote><b>Hi Dude!\n\nTo use this bot you just have to join both channels that's it..\nWatch Tutorial to open Link - <a href=https://t.me/+ZLu08PF-JUIzMjFl>Clickhere</a></b></blockquote>"
+
 ABOUT_TXT = """<b>🤖 ᴍʏ ɴᴀᴍᴇ: {botname}
 
 <b><blockquote expandable>» ᴄʀᴇᴀᴛᴏʀ: <a href=https://t.me/Here_remo>Ꮢᴇᴍᴏ 🜲</a>
@@ -55,12 +54,13 @@ SHORT_MSG = "<b>⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄ
 START_MSG = os.environ.get("START_MESSAGE", """<b>⚡ ʏᴏ, {mention} ~  
 
 <blockquote expandable>ʏᴏᴜ ᴡᴏᴋᴇ ᴍᴇ ᴜᴘ!\nʀᴇᴀᴅʏ ᴛᴏ ᴅɪᴠᴇ ɪɴᴛᴏ ꜱᴏᴍᴇ ᴄʜᴀᴏꜱ ᴀɴᴅ ɢʀᴀʙ ᴡʜᴀᴛ ʏᴏᴜ ɴᴇᴇᴅ?\n\nɴꜰɪʟᴇꜱ, ꜰᴜɴ ᴀɴᴅ ᴀ ᴡʜᴏʟᴇ ʟᴏᴛᴛᴀ ᴇɴᴇʀɢʏ—ʟᴇᴛ’ꜱ ʀᴏʟʟ!.</blockquote></b>""")
+
 try:
-    ADMINS=[1418213560]
+    ADMINS = [1418213560]
     for x in (os.environ.get("ADMINS", "6587003349 7827448605 8160777407").split()):
         ADMINS.append(int(x))
 except ValueError:
-        raise Exception("Your Admins list does not contain valid integers.")
+    raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", """<b><blockquote>⚠️ Hᴇʏ, {mention} ×</blockquote>
@@ -85,12 +85,12 @@ USER_REPLY_TEXT = "<blockquote>ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ
 
 AUTO_DEL = os.environ.get("AUTO_DEL", "True")
 DEL_TIMER = int(os.environ.get("DEL_TIMER", "1800"))
-DEL_MSG = "(⚠️ Dᴜᴇ ᴛᴏ Cᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs....\n<blockquote>Yᴏᴜʀ ғɪʟᴇs ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴡɪᴛʜɪɴ {}.Sᴏ ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇᴍ ᴛᴏ ᴀɴʏ ᴏᴛʜᴇʀ ᴘʟᴀᴄᴇ ғᴏʀ ғᴜᴛᴜʀᴇ ᴀᴠᴀɪʟᴀʙɪʟɪᴛʏ.</blockquote>")"
+
+# FIXED VERSION ↓↓↓
+DEL_MSG = "(⚠️ Dᴜᴇ ᴛᴏ Cᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs....\n<blockquote>Yᴏᴜʀ ғɪʟᴇs ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴡɪᴛʜɪɴ {}. Sᴏ ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇᴍ ᴛᴏ ᴀɴʏ ᴏᴛʜᴇʀ ᴘʟᴀᴄᴇ ғᴏʀ ғᴜᴛᴜʀᴇ ᴀᴠᴀɪʟᴀʙɪʟɪᴛʏ.</blockquote>)"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1418213560)
-
-LOG_FILE_NAME = "filesharingbot.txt"
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
@@ -113,4 +113,4 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
 
-#Bhen ke lavdo Credit hataya na ma choddunga wahi aakr salo use karo bas 
+#Bhen ke lavdo Credit hataya na ma choddunga wahi aakr salo use karo bas

@@ -61,12 +61,16 @@ START_MSG = os.environ.get(
     "START_MESSAGE",
     """<b>⚡ ʏᴏ, {mention} ~
 
+START_MSG = os.environ.get(
+    "START_MESSAGE",
+    """⚡ <b>ʏᴏ, {mention} ~</b>
+
 <blockquote expandable>
-ʏᴏᴜ ᴡᴏᴋᴇ ᴍᴇ ᴜᴘ!
+<b>ʏᴏᴜ ᴡᴏᴋᴇ ᴍᴇ ᴜᴘ!
 ʀᴇᴀᴅʏ ꜰᴏʀ ꜰɪʟᴇꜱ, ꜰᴜɴ ᴀɴᴅ ᴀ ʟᴏᴛ ᴏꜰ ᴇɴᴇʀɢʏ?
-ʟᴇᴛ’ꜱ ʀᴏʟʟ!
-</blockquote></b>"""
-)
+ʟᴇᴛ’ꜱ ʀᴏʟʟ!</b>
+</blockquote>
+""")
 
 try:
     ADMINS = [OWNER_ID]
@@ -77,11 +81,13 @@ except ValueError:
 
 FORCE_MSG = os.environ.get(
     "FORCE_SUB_MESSAGE",
-    """<b><blockquote>⚠️ Hᴇʏ, {mention} ×</blockquote>
-You haven't joined {count}/{total} channels yet.  
-Please join the channels below & try again!
-</b>"""
-)
+    """<blockquote>
+<b>⚠️ Hᴇʏ, {mention} ×</b>
+
+<b>Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ {count}/{total} ᴄʜᴀɴɴᴇʟs ʏᴇᴛ.</b>
+<b>Pʟᴇᴀsᴇ ᴊᴏɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟs ʙᴇʟᴏᴡ & ᴛʀʏ ᴀɢᴀɪɴ!</b>
+</blockquote>
+""")
 
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 

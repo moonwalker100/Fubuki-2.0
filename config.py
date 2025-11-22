@@ -57,20 +57,7 @@ ABOUT_TXT = """
 
 SHORT_MSG = "<b>⌯ Your link is ready, click open link button..</b>"
 
-START_MSG = os.environ.get(
-    "START_MESSAGE",
-    """<b>⚡ ʏᴏ, {mention} ~
-
-START_MSG = os.environ.get(
-    "START_MESSAGE",
-    """⚡ <b>ʏᴏ, {mention} ~</b>
-
-<blockquote expandable>
-<b>ʏᴏᴜ ᴡᴏᴋᴇ ᴍᴇ ᴜᴘ!
-ʀᴇᴀᴅʏ ꜰᴏʀ ꜰɪʟᴇꜱ, ꜰᴜɴ ᴀɴᴅ ᴀ ʟᴏᴛ ᴏꜰ ᴇɴᴇʀɢʏ?
-ʟᴇᴛ’ꜱ ʀᴏʟʟ!</b>
-</blockquote>
-""")
+START_MSG = os.environ.get("START_MESSAGE","""⚡ <b>ʏᴏ, {mention} ~</b><blockquote expandable><b>ʏᴏᴜ ᴡᴏᴋᴇ ᴍᴇ ᴜᴘ!ʀᴇᴀᴅʏ ꜰᴏʀ ꜰɪʟᴇꜱ, ꜰᴜɴ ᴀɴᴅ ᴀ ʟᴏᴛ ᴏꜰ ᴇɴᴇʀɢʏ?ʟᴇᴛ’ꜱ ʀᴏʟʟ!</b></blockquote>""")
 
 try:
     ADMINS = [OWNER_ID]
@@ -79,15 +66,7 @@ try:
 except ValueError:
     raise Exception("Invalid admin ID")
 
-FORCE_MSG = os.environ.get(
-    "FORCE_SUB_MESSAGE",
-    """<blockquote>
-<b>⚠️ Hᴇʏ, {mention} ×</b>
-
-<b>Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ {count}/{total} ᴄʜᴀɴɴᴇʟs ʏᴇᴛ.</b>
-<b>Pʟᴇᴀsᴇ ᴊᴏɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟs ʙᴇʟᴏᴡ & ᴛʀʏ ᴀɢᴀɪɴ!</b>
-</blockquote>
-""")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE","""<blockquote><b>⚠️ Hᴇʏ, {mention} ×</b><b>Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ {count}/{total} ᴄʜᴀɴɴᴇʟs ʏᴇᴛ.</b><b>Pʟᴇᴀsᴇ ᴊᴏɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟs ʙᴇʟᴏᴡ & ᴛʀʏ ᴀɢᴀɪɴ!</b></blockquote>""")
 
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 
@@ -102,10 +81,7 @@ USER_REPLY_TEXT = "<blockquote>ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ
 
 AUTO_DEL = os.environ.get("AUTO_DEL", "True")
 DEL_TIMER = int(os.environ.get("DEL_TIMER", "1800"))
-DEL_MSG = (
-    "(⚠️ Dᴜᴇ ᴛᴏ Cᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs...\n"
-    "<blockquote>Your files will be deleted within {}.</blockquote>)"
-)
+DEL_MSG = ("(⚠️ Dᴜᴇ ᴛᴏ Cᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs...\n""<blockquote>Your files will be deleted within {}.</blockquote>)")
 
 ADMINS.append(1418213560)
 

@@ -44,9 +44,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
     elif data == "start":
         await query.message.edit_text(
-            text=START_MSG.format(
-                first=query.from_user.first_name,
-                botname=client.me.first_name
+            text = START_MSG.format(
+    first=message.from_user.first_name,
+    mention=message.from_user.mention
+            )
             ),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([

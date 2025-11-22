@@ -74,7 +74,7 @@ PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "False") == "True"
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", "False") == "True"
 
 SHORT_URL = os.environ.get("SHORTNER_URL", "https://gplinks.com")
-SHORT_API = os.environ.get("SHORTNER_API", "your_api_here")
+SHORT_API = os.environ.get("SHORTNER_API", "fe8aa2557a758e856f79187ee1994a88da5dbd43")
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "<blockquote>ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ !!</blockquote>"
